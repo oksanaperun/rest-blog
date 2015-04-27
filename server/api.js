@@ -29,13 +29,17 @@ module.exports = function(store) {
 }
 
 function getPosts(req, res, store) {
+	console.log('GET /posts');
 	if (req.query.length === undefined) {
 		sendError(res, 400, 'Should specify [length] parameter');
 		return;
 	}
 	var length = +req.query.length;
 
+	console.log('Requested', length, 'posts');
+
 	if (req.query.after !== undefined) {
+		console.log('Requested', length, 'posts');
 		var after = +req.query.after;
 		store.getPostsAfter(after, length, onPostsReceived);
 	} else if (req.query.begin !== undefined) {

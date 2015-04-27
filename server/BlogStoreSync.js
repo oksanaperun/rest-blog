@@ -31,6 +31,7 @@ _p.addPost = function(post) {
 };
 
 _p.getPostsRange = function(begin, length) {
+	console.log('Getting posts range from', begin, 'total', length, 'posts');
 	var posts = this._posts.slice(begin, begin + length);
 	return posts.map(function(it) {
 		return stripText(stripComments(it));

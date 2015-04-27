@@ -5,7 +5,16 @@
 		"text": "This is my second blog post",
 		"author": "admin",
 		"timestamp": 12345778,
-		"comments": []
+		"comments": [
+			{
+				"id": 1,
+				"summary": "Looks good",
+				"text": "This is a comment",
+				"author": "hello",
+				"postId": 1,
+				"timestamp": 12345678
+			}
+		]
 	},
 	{
 		"id": 1,
