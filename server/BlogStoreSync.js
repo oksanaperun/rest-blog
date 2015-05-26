@@ -20,6 +20,10 @@ _p._init = function(posts) {
 		if (it.id > self._maxPostId) {
 			self._maxPostId = it.id;
 		}
+		it.comments.forEach(function(comment) {
+			if (comment.id > self._maxCommentId)
+				self._maxCommentId = comment.id
+		});
 	});
 }
 
